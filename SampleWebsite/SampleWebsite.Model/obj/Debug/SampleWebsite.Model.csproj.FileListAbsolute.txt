@@ -1,0 +1,15 @@
+E:\Demo Projects\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.csprojResolveAssemblyReference.cache
+E:\Demo Projects\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.csprojResolveAssemblyReference.cache
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.csprojResolveAssemblyReference.cache
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.pdb

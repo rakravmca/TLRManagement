@@ -1,0 +1,36 @@
+﻿body {
+    background-color:#fff6ef;
+}
+
+#divHeaderTop {
+    min-height:20px;
+    background-color:#fee3ce;
+}
+
+#divHeaderBottom {
+    min-height:80px;
+}
+
+#divMenu {
+    min-height:50px;
+    background-color:#eb6904;
+}
+
+#divBody {
+    min-height:500px;
+}
+
+#divFooterBottom {
+    min-height:50px;
+    background-color:#eb6904;
+}
+
+.boxBorder {
+    border:2px solid #eb6904; /* no info for size nor color yet */
+    box-shadow: 0 0 0 3px #fc8d37;
+    border-radius:2px; /* prefix not needed anymore */
+}
+
+#divLogin {
+    margin-top:20px;
+}

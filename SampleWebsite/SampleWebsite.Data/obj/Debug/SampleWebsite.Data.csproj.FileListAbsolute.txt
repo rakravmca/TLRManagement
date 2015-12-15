@@ -1,0 +1,40 @@
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll.config
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.xml
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.csprojResolveAssemblyReference.cache
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll.config
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.csprojResolveAssemblyReference.cache
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll.config
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.xml
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.csprojResolveAssemblyReference.cache
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll.config
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\SampleWebsite.Data.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.xml
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.csprojResolveAssemblyReference.cache
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Data\obj\Debug\SampleWebsite.Data.pdb

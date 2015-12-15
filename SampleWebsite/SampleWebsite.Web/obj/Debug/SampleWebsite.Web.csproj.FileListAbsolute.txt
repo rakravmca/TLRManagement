@@ -1,0 +1,60 @@
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.csprojResolveAssemblyReference.cache
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.csprojResolveAssemblyReference.cache
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.xml
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.csprojResolveAssemblyReference.cache
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Web.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Business.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Model.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Utility.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\SampleWebsite.Data.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\bin\EntityFramework.xml
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.csprojResolveAssemblyReference.cache
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Web\obj\Debug\SampleWebsite.Web.pdb

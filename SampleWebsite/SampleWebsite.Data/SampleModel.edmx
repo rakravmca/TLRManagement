@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SampleModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SampleModelStoreContainer">
+          <EntitySet Name="Answer" EntityType="SampleModel.Store.Answer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Article" EntityType="SampleModel.Store.Article" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ArticleCategorySubject" EntityType="SampleModel.Store.ArticleCategorySubject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Category" EntityType="SampleModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Question" EntityType="SampleModel.Store.Question" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuestionAnswer" EntityType="SampleModel.Store.QuestionAnswer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="QuestionCategorySubject" EntityType="SampleModel.Store.QuestionCategorySubject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subject" EntityType="SampleModel.Store.Subject" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="SampleModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserType" EntityType="SampleModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Answer_User" Association="SampleModel.Store.FK_Answer_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Answer" EntitySet="Answer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_User" Association="SampleModel.Store.FK_Article_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleCategorySubject_Article" Association="SampleModel.Store.FK_ArticleCategorySubject_Article">
+            <End Role="Article" EntitySet="Article" />
+            <End Role="ArticleCategorySubject" EntitySet="ArticleCategorySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleCategorySubject_Category" Association="SampleModel.Store.FK_ArticleCategorySubject_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="ArticleCategorySubject" EntitySet="ArticleCategorySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleCategorySubject_Subject" Association="SampleModel.Store.FK_ArticleCategorySubject_Subject">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="ArticleCategorySubject" EntitySet="ArticleCategorySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Question_User" Association="SampleModel.Store.FK_Question_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Question" EntitySet="Question" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionAnswer_Answer" Association="SampleModel.Store.FK_QuestionAnswer_Answer">
+            <End Role="Answer" EntitySet="Answer" />
+            <End Role="QuestionAnswer" EntitySet="QuestionAnswer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionAnswer_Question" Association="SampleModel.Store.FK_QuestionAnswer_Question">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="QuestionAnswer" EntitySet="QuestionAnswer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionCategorySubject_Category" Association="SampleModel.Store.FK_QuestionCategorySubject_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="QuestionCategorySubject" EntitySet="QuestionCategorySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionCategorySubject_Question" Association="SampleModel.Store.FK_QuestionCategorySubject_Question">
+            <End Role="Question" EntitySet="Question" />
+            <End Role="QuestionCategorySubject" EntitySet="QuestionCategorySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionCategorySubject_Subject" Association="SampleModel.Store.FK_QuestionCategorySubject_Subject">
+            <End Role="Subject" EntitySet="Subject" />
+            <End Role="QuestionCategorySubject" EntitySet="QuestionCategorySubject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Subject_Category" Association="SampleModel.Store.FK_Subject_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Subject" EntitySet="Subject" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserType" Association="SampleModel.Store.FK_User_UserType">
+            <End Role="UserType" EntitySet="UserType" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="text" Nullable="false" />
+          <Property Name="AnswerBy" Type="bigint" Nullable="false" />
+          <Property Name="AnswerDate" Type="datetime" Nullable="false" />
+          <Property Name="IsPublished" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="2000" />
+          <Property Name="Description" Type="text" Nullable="false" />
+          <Property Name="ArticleBy" Type="bigint" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsPublished" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ArticleCategorySubject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="SubjectId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="text" Nullable="false" />
+          <Property Name="QuestionBy" Type="bigint" Nullable="false" />
+          <Property Name="CreationDate" Type="datetime" Nullable="false" />
+          <Property Name="IsPublished" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuestionAnswer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionId" Type="bigint" Nullable="false" />
+          <Property Name="AnswerId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="QuestionCategorySubject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="QuestionId" Type="bigint" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="SubjectId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Answer_User">
+          <End Role="User" Type="SampleModel.Store.User" Multiplicity="1" />
+          <End Role="Answer" Type="SampleModel.Store.Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="AnswerBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_User">
+          <End Role="User" Type="SampleModel.Store.User" Multiplicity="1" />
+          <End Role="Article" Type="SampleModel.Store.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="ArticleBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleCategorySubject_Article">
+          <End Role="Article" Type="SampleModel.Store.Article" Multiplicity="1" />
+          <End Role="ArticleCategorySubject" Type="SampleModel.Store.ArticleCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategorySubject">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleCategorySubject_Category">
+          <End Role="Category" Type="SampleModel.Store.Category" Multiplicity="1" />
+          <End Role="ArticleCategorySubject" Type="SampleModel.Store.ArticleCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategorySubject">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleCategorySubject_Subject">
+          <End Role="Subject" Type="SampleModel.Store.Subject" Multiplicity="1" />
+          <End Role="ArticleCategorySubject" Type="SampleModel.Store.ArticleCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategorySubject">
+              <PropertyRef Name="SubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Question_User">
+          <End Role="User" Type="SampleModel.Store.User" Multiplicity="1" />
+          <End Role="Question" Type="SampleModel.Store.Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="QuestionBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionAnswer_Answer">
+          <End Role="Answer" Type="SampleModel.Store.Answer" Multiplicity="1" />
+          <End Role="QuestionAnswer" Type="SampleModel.Store.QuestionAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionAnswer">
+              <PropertyRef Name="AnswerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionAnswer_Question">
+          <End Role="Question" Type="SampleModel.Store.Question" Multiplicity="1" />
+          <End Role="QuestionAnswer" Type="SampleModel.Store.QuestionAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionAnswer">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionCategorySubject_Category">
+          <End Role="Category" Type="SampleModel.Store.Category" Multiplicity="1" />
+          <End Role="QuestionCategorySubject" Type="SampleModel.Store.QuestionCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionCategorySubject">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionCategorySubject_Question">
+          <End Role="Question" Type="SampleModel.Store.Question" Multiplicity="1" />
+          <End Role="QuestionCategorySubject" Type="SampleModel.Store.QuestionCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionCategorySubject">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionCategorySubject_Subject">
+          <End Role="Subject" Type="SampleModel.Store.Subject" Multiplicity="1" />
+          <End Role="QuestionCategorySubject" Type="SampleModel.Store.QuestionCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionCategorySubject">
+              <PropertyRef Name="SubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subject_Category">
+          <End Role="Category" Type="SampleModel.Store.Category" Multiplicity="1" />
+          <End Role="Subject" Type="SampleModel.Store.Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Subject">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserType">
+          <End Role="UserType" Type="SampleModel.Store.UserType" Multiplicity="1" />
+          <End Role="User" Type="SampleModel.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SampleModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SampleEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Answers" EntityType="SampleModel.Answer" />
+          <EntitySet Name="Articles" EntityType="SampleModel.Article" />
+          <EntitySet Name="ArticleCategorySubjects" EntityType="SampleModel.ArticleCategorySubject" />
+          <EntitySet Name="QuestionAnswers" EntityType="SampleModel.QuestionAnswer" />
+          <EntitySet Name="Users" EntityType="SampleModel.User" />
+          <EntitySet Name="UserTypes" EntityType="SampleModel.UserType" />
+          <AssociationSet Name="FK_Answer_User" Association="SampleModel.FK_Answer_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Answer" EntitySet="Answers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionAnswer_Answer" Association="SampleModel.FK_QuestionAnswer_Answer">
+            <End Role="Answer" EntitySet="Answers" />
+            <End Role="QuestionAnswer" EntitySet="QuestionAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_User" Association="SampleModel.FK_Article_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Article" EntitySet="Articles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleCategorySubject_Article" Association="SampleModel.FK_ArticleCategorySubject_Article">
+            <End Role="Article" EntitySet="Articles" />
+            <End Role="ArticleCategorySubject" EntitySet="ArticleCategorySubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserType" Association="SampleModel.FK_User_UserType">
+            <End Role="UserType" EntitySet="UserTypes" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <EntitySet Name="Categories" EntityType="SampleModel.Category" />
+          <EntitySet Name="Questions" EntityType="SampleModel.Question" />
+          <EntitySet Name="QuestionCategorySubjects" EntityType="SampleModel.QuestionCategorySubject" />
+          <EntitySet Name="Subjects" EntityType="SampleModel.Subject" />
+          <AssociationSet Name="FK_ArticleCategorySubject_Category" Association="SampleModel.FK_ArticleCategorySubject_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="ArticleCategorySubject" EntitySet="ArticleCategorySubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ArticleCategorySubject_Subject" Association="SampleModel.FK_ArticleCategorySubject_Subject">
+            <End Role="Subject" EntitySet="Subjects" />
+            <End Role="ArticleCategorySubject" EntitySet="ArticleCategorySubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionCategorySubject_Category" Association="SampleModel.FK_QuestionCategorySubject_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="QuestionCategorySubject" EntitySet="QuestionCategorySubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Subject_Category" Association="SampleModel.FK_Subject_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Subject" EntitySet="Subjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Question_User" Association="SampleModel.FK_Question_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Question" EntitySet="Questions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionAnswer_Question" Association="SampleModel.FK_QuestionAnswer_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="QuestionAnswer" EntitySet="QuestionAnswers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionCategorySubject_Question" Association="SampleModel.FK_QuestionCategorySubject_Question">
+            <End Role="Question" EntitySet="Questions" />
+            <End Role="QuestionCategorySubject" EntitySet="QuestionCategorySubjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_QuestionCategorySubject_Subject" Association="SampleModel.FK_QuestionCategorySubject_Subject">
+            <End Role="Subject" EntitySet="Subjects" />
+            <End Role="QuestionCategorySubject" EntitySet="QuestionCategorySubjects" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Answer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="AnswerBy" Nullable="false" />
+          <Property Type="DateTime" Name="AnswerDate" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsPublished" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="SampleModel.FK_Answer_User" FromRole="Answer" ToRole="User" />
+          <NavigationProperty Name="QuestionAnswers" Relationship="SampleModel.FK_QuestionAnswer_Answer" FromRole="Answer" ToRole="QuestionAnswer" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="ArticleBy" Nullable="false" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsPublished" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="SampleModel.FK_Article_User" FromRole="Article" ToRole="User" />
+          <NavigationProperty Name="ArticleCategorySubjects" Relationship="SampleModel.FK_ArticleCategorySubject_Article" FromRole="Article" ToRole="ArticleCategorySubject" />
+        </EntityType>
+        <EntityType Name="ArticleCategorySubject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" />
+          <Property Type="Int64" Name="ArticleId" Nullable="false" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="Int64" Name="SubjectId" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="SampleModel.FK_ArticleCategorySubject_Article" FromRole="ArticleCategorySubject" ToRole="Article" />
+          <NavigationProperty Name="Category" Relationship="SampleModel.FK_ArticleCategorySubject_Category" FromRole="ArticleCategorySubject" ToRole="Category" />
+          <NavigationProperty Name="Subject" Relationship="SampleModel.FK_ArticleCategorySubject_Subject" FromRole="ArticleCategorySubject" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="QuestionAnswer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="QuestionId" Nullable="false" />
+          <Property Type="Int64" Name="AnswerId" Nullable="false" />
+          <NavigationProperty Name="Answer" Relationship="SampleModel.FK_QuestionAnswer_Answer" FromRole="QuestionAnswer" ToRole="Answer" />
+          <NavigationProperty Name="Question" Relationship="SampleModel.FK_QuestionAnswer_Question" FromRole="QuestionAnswer" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserTypeId" Nullable="false" />
+          <NavigationProperty Name="Answers" Relationship="SampleModel.FK_Answer_User" FromRole="User" ToRole="Answer" />
+          <NavigationProperty Name="Articles" Relationship="SampleModel.FK_Article_User" FromRole="User" ToRole="Article" />
+          <NavigationProperty Name="UserType" Relationship="SampleModel.FK_User_UserType" FromRole="User" ToRole="UserType" />
+          <NavigationProperty Name="Questions" Relationship="SampleModel.FK_Question_User" FromRole="User" ToRole="Question" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="SampleModel.FK_User_UserType" FromRole="UserType" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Answer_User">
+          <End Type="SampleModel.User" Role="User" Multiplicity="1" />
+          <End Type="SampleModel.Answer" Role="Answer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Answer">
+              <PropertyRef Name="AnswerBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionAnswer_Answer">
+          <End Type="SampleModel.Answer" Role="Answer" Multiplicity="1" />
+          <End Type="SampleModel.QuestionAnswer" Role="QuestionAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Answer">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionAnswer">
+              <PropertyRef Name="AnswerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_User">
+          <End Type="SampleModel.User" Role="User" Multiplicity="1" />
+          <End Type="SampleModel.Article" Role="Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="ArticleBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleCategorySubject_Article">
+          <End Type="SampleModel.Article" Role="Article" Multiplicity="1" />
+          <End Type="SampleModel.ArticleCategorySubject" Role="ArticleCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategorySubject">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserType">
+          <End Type="SampleModel.UserType" Role="UserType" Multiplicity="1" />
+          <End Type="SampleModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="ArticleCategorySubjects" Relationship="SampleModel.FK_ArticleCategorySubject_Category" FromRole="Category" ToRole="ArticleCategorySubject" />
+          <NavigationProperty Name="QuestionCategorySubjects" Relationship="SampleModel.FK_QuestionCategorySubject_Category" FromRole="Category" ToRole="QuestionCategorySubject" />
+          <NavigationProperty Name="Subjects" Relationship="SampleModel.FK_Subject_Category" FromRole="Category" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int64" Name="QuestionBy" Nullable="false" />
+          <Property Type="DateTime" Name="CreationDate" Nullable="false" Precision="3" />
+          <Property Type="Boolean" Name="IsPublished" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="SampleModel.FK_Question_User" FromRole="Question" ToRole="User" />
+          <NavigationProperty Name="QuestionAnswers" Relationship="SampleModel.FK_QuestionAnswer_Question" FromRole="Question" ToRole="QuestionAnswer" />
+          <NavigationProperty Name="QuestionCategorySubjects" Relationship="SampleModel.FK_QuestionCategorySubject_Question" FromRole="Question" ToRole="QuestionCategorySubject" />
+        </EntityType>
+        <EntityType Name="QuestionCategorySubject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="QuestionId" Nullable="false" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="Int64" Name="SubjectId" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="SampleModel.FK_QuestionCategorySubject_Category" FromRole="QuestionCategorySubject" ToRole="Category" />
+          <NavigationProperty Name="Question" Relationship="SampleModel.FK_QuestionCategorySubject_Question" FromRole="QuestionCategorySubject" ToRole="Question" />
+          <NavigationProperty Name="Subject" Relationship="SampleModel.FK_QuestionCategorySubject_Subject" FromRole="QuestionCategorySubject" ToRole="Subject" />
+        </EntityType>
+        <EntityType Name="Subject">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <NavigationProperty Name="ArticleCategorySubjects" Relationship="SampleModel.FK_ArticleCategorySubject_Subject" FromRole="Subject" ToRole="ArticleCategorySubject" />
+          <NavigationProperty Name="Category" Relationship="SampleModel.FK_Subject_Category" FromRole="Subject" ToRole="Category" />
+          <NavigationProperty Name="QuestionCategorySubjects" Relationship="SampleModel.FK_QuestionCategorySubject_Subject" FromRole="Subject" ToRole="QuestionCategorySubject" />
+        </EntityType>
+        <Association Name="FK_ArticleCategorySubject_Category">
+          <End Type="SampleModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="SampleModel.ArticleCategorySubject" Role="ArticleCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategorySubject">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ArticleCategorySubject_Subject">
+          <End Type="SampleModel.Subject" Role="Subject" Multiplicity="1" />
+          <End Type="SampleModel.ArticleCategorySubject" Role="ArticleCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleCategorySubject">
+              <PropertyRef Name="SubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionCategorySubject_Category">
+          <End Type="SampleModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="SampleModel.QuestionCategorySubject" Role="QuestionCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionCategorySubject">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subject_Category">
+          <End Type="SampleModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="SampleModel.Subject" Role="Subject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Subject">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Question_User">
+          <End Type="SampleModel.User" Role="User" Multiplicity="1" />
+          <End Type="SampleModel.Question" Role="Question" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Question">
+              <PropertyRef Name="QuestionBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionAnswer_Question">
+          <End Type="SampleModel.Question" Role="Question" Multiplicity="1" />
+          <End Type="SampleModel.QuestionAnswer" Role="QuestionAnswer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionAnswer">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionCategorySubject_Question">
+          <End Type="SampleModel.Question" Role="Question" Multiplicity="1" />
+          <End Type="SampleModel.QuestionCategorySubject" Role="QuestionCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Question">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionCategorySubject">
+              <PropertyRef Name="QuestionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_QuestionCategorySubject_Subject">
+          <End Type="SampleModel.Subject" Role="Subject" Multiplicity="1" />
+          <End Type="SampleModel.QuestionCategorySubject" Role="QuestionCategorySubject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Subject">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="QuestionCategorySubject">
+              <PropertyRef Name="SubjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SampleModelStoreContainer" CdmEntityContainer="SampleEntities">
+          <EntitySetMapping Name="Answers">
+            <EntityTypeMapping TypeName="SampleModel.Answer">
+              <MappingFragment StoreEntitySet="Answer">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="AnswerDate" ColumnName="AnswerDate" />
+                <ScalarProperty Name="AnswerBy" ColumnName="AnswerBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="SampleModel.Article">
+              <MappingFragment StoreEntitySet="Article">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="ArticleBy" ColumnName="ArticleBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleCategorySubjects">
+            <EntityTypeMapping TypeName="SampleModel.ArticleCategorySubject">
+              <MappingFragment StoreEntitySet="ArticleCategorySubject">
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuestionAnswers">
+            <EntityTypeMapping TypeName="SampleModel.QuestionAnswer">
+              <MappingFragment StoreEntitySet="QuestionAnswer">
+                <ScalarProperty Name="AnswerId" ColumnName="AnswerId" />
+                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SampleModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="SampleModel.UserType">
+              <MappingFragment StoreEntitySet="UserType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="SampleModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="SampleModel.Question">
+              <MappingFragment StoreEntitySet="Question">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsPublished" ColumnName="IsPublished" />
+                <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+                <ScalarProperty Name="QuestionBy" ColumnName="QuestionBy" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuestionCategorySubjects">
+            <EntityTypeMapping TypeName="SampleModel.QuestionCategorySubject">
+              <MappingFragment StoreEntitySet="QuestionCategorySubject">
+                <ScalarProperty Name="SubjectId" ColumnName="SubjectId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="QuestionId" ColumnName="QuestionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subjects">
+            <EntityTypeMapping TypeName="SampleModel.Subject">
+              <MappingFragment StoreEntitySet="Subject">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

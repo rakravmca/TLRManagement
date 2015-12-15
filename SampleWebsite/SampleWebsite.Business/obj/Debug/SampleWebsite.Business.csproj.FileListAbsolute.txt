@@ -1,0 +1,64 @@
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.xml
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.csprojResolveAssemblyReference.cache
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll.config
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll.config
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.csprojResolveAssemblyReference.cache
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll.config
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.xml
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.csprojResolveAssemblyReference.cache
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll.config
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Business.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Data.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Model.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\SampleWebsite.Utility.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.xml
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\bin\Debug\EntityFramework.SqlServer.xml
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.csprojResolveAssemblyReference.cache
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Business\obj\Debug\SampleWebsite.Business.pdb

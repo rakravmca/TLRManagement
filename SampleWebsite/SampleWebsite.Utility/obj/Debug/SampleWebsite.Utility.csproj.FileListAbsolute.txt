@@ -1,0 +1,20 @@
+E:\Demo Projects\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.pdb
+E:\Demo Projects\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.csprojResolveAssemblyReference.cache
+E:\Demo Projects\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.dll
+E:\Demo Projects\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.pdb
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.csprojResolveAssemblyReference.cache
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.dll
+D:\Projects\SampleWebsiteNew\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.csprojResolveAssemblyReference.cache
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.dll
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.pdb
+E:\Projects\SampleWebsite2\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Utility\bin\Debug\SampleWebsite.Utility.pdb
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.csprojResolveAssemblyReference.cache
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.dll
+E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Utility\obj\Debug\SampleWebsite.Utility.pdb
