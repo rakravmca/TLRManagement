@@ -1,19 +1,22 @@
 ﻿body {
-    background-color:#fff6ef;
+    background-color:#fff;
 }
 
 #divHeaderTop {
-    min-height:20px;
-    background-color:#fee3ce;
+    min-height:25px;
+    padding:2px 10px;
 }
 
-#divHeaderBottom {
+.authLinks {
+    float:right;
+}
+
+#divHeaderContent {
     min-height:80px;
 }
 
-#divMenu {
+#divHeaderBottom {
     min-height:50px;
-    background-color:#eb6904;
 }
 
 #divBody {
@@ -21,8 +24,8 @@
 }
 
 #divFooterBottom {
-    min-height:50px;
-    background-color:#eb6904;
+    min-height:25px;
+    padding:2px 10px;
 }
 
 .boxBorder {

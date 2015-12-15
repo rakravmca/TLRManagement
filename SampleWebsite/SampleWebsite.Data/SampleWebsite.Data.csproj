@@ -41,6 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -50,28 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Answer.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Article.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ArticleCategorySubject.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Category.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Question.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuestionAnswer.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="QuestionCategorySubject.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="SampleModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,9 +67,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SampleModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Subject.cs">
-      <DependentUpon>SampleModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>SampleModel.tt</DependentUpon>
     </Compile>
@@ -98,14 +75,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
     <EntityDeploy Include="SampleModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SampleModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="packages.config" />
     <None Include="SampleModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SampleModel.edmx</DependentUpon>

@@ -19,7 +19,7 @@
     <form id="form1" runat="server">
         <div id="divMain" data-ng-app="publicSiteApp">
             <div id="divHeader">
-                <div id="divHeaderTop">
+                <div id="divHeaderTop" class="navbar-default">
                     <a href="login.aspx">Login</a>
                     <a href="#" style="display: none;">Register</a>
                 </div>
@@ -33,7 +33,9 @@
             <div id="divFooter">
                 <div id="divFooterTop"></div>
                 <div id="divFooterContent"></div>
-                <div id="divFooterBottom"></div>
+                <div id="divFooterBottom" class="navbar-default">
+                    <a href="#">Copyrights</a>
+                </div>
             </div>
         </div>
     </form>

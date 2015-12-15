@@ -14,11 +14,12 @@
         <div id="divMain">
             <div id="divHeader">
                 <div id="divHeaderTop">
-                    <a href="#">Register</a>
+                    <div class="authLinks">
+                        <a href="#">Register</a>
+                    </div>
                 </div>
+                <div id="divHeaderContent"></div>
                 <div id="divHeaderBottom"></div>
-            </div>
-            <div id="divMenu">
             </div>
             <div id="divBody">
                 <div class="container-fluid">
@@ -79,7 +80,9 @@
             <div id="divFooter">
                 <div id="divFooterTop"></div>
                 <div id="divFooterContent"></div>
-                <div id="divFooterBottom"></div>
+                <div id="divFooterBottom">
+                    <a href="#">Copyrights</a>
+                </div>
             </div>
         </div>
     </form>

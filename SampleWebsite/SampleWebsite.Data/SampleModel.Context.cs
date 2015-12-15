@@ -25,15 +25,7 @@ namespace SampleWebsite.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Answer> Answers { get; set; }
-        public DbSet<Article> Articles { get; set; }
-        public DbSet<ArticleCategorySubject> ArticleCategorySubjects { get; set; }
-        public DbSet<QuestionAnswer> QuestionAnswers { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserType> UserTypes { get; set; }
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Question> Questions { get; set; }
-        public DbSet<QuestionCategorySubject> QuestionCategorySubjects { get; set; }
-        public DbSet<Subject> Subjects { get; set; }
     }
 }

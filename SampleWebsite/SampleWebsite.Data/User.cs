@@ -14,13 +14,6 @@ namespace SampleWebsite.Data
     
     public partial class User
     {
-        public User()
-        {
-            this.Answers = new HashSet<Answer>();
-            this.Articles = new HashSet<Article>();
-            this.Questions = new HashSet<Question>();
-        }
-    
         public long Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
@@ -31,9 +24,6 @@ namespace SampleWebsite.Data
         public string Email { get; set; }
         public int UserTypeId { get; set; }
     
-        public virtual ICollection<Answer> Answers { get; set; }
-        public virtual ICollection<Article> Articles { get; set; }
         public virtual UserType UserType { get; set; }
-        public virtual ICollection<Question> Questions { get; set; }
     }
 }
