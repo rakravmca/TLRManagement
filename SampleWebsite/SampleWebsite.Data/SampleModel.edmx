@@ -4,15 +4,77 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TLRManagementModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TLRManagementModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="TLRManagementModelStoreContainer">
+          <EntitySet Name="Material" EntityType="TLRManagementModel.Store.Material" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StitchingOrder" EntityType="TLRManagementModel.Store.StitchingOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StitchingStatus" EntityType="TLRManagementModel.Store.StitchingStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StitchingType" EntityType="TLRManagementModel.Store.StitchingType" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="User" EntityType="TLRManagementModel.Store.User" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="UserType" EntityType="TLRManagementModel.Store.UserType" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_StitchingOrder_AssignedToUser" Association="TLRManagementModel.Store.FK_StitchingOrder_AssignedToUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="StitchingOrder" EntitySet="StitchingOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StitchingOrder_CreatedByUser" Association="TLRManagementModel.Store.FK_StitchingOrder_CreatedByUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="StitchingOrder" EntitySet="StitchingOrder" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StitchingOrder_StitchingOrder" Association="TLRManagementModel.Store.FK_StitchingOrder_StitchingOrder">
+            <End Role="StitchingType" EntitySet="StitchingType" />
+            <End Role="StitchingOrder" EntitySet="StitchingOrder" />
+          </AssociationSet>
           <AssociationSet Name="FK_User_UserType" Association="TLRManagementModel.Store.FK_User_UserType">
             <End Role="UserType" EntitySet="UserType" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Material">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Cost" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
+        <EntityType Name="StitchingOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="StitchingTypeId" Type="smallint" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfOrder" Type="datetime" Nullable="false" />
+          <Property Name="DateOfDelivery" Type="datetime" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="false" />
+          <Property Name="AssignedTo" Type="bigint" />
+          <Property Name="PaidAmount" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="StitchingStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="smallint" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="StitchingType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="nvarchar" Nullable="false" MaxLength="10" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Cost" Type="decimal" Nullable="false" Scale="2" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
@@ -31,9 +93,45 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
         </EntityType>
+        <Association Name="FK_StitchingOrder_AssignedToUser">
+          <End Role="User" Type="TLRManagementModel.Store.User" Multiplicity="0..1" />
+          <End Role="StitchingOrder" Type="TLRManagementModel.Store.StitchingOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StitchingOrder">
+              <PropertyRef Name="AssignedTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StitchingOrder_CreatedByUser">
+          <End Role="User" Type="TLRManagementModel.Store.User" Multiplicity="1" />
+          <End Role="StitchingOrder" Type="TLRManagementModel.Store.StitchingOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StitchingOrder">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StitchingOrder_StitchingOrder">
+          <End Role="StitchingType" Type="TLRManagementModel.Store.StitchingType" Multiplicity="1" />
+          <End Role="StitchingOrder" Type="TLRManagementModel.Store.StitchingOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StitchingType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StitchingOrder">
+              <PropertyRef Name="StitchingTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_User_UserType">
           <End Role="UserType" Type="TLRManagementModel.Store.UserType" Multiplicity="1" />
           <End Role="User" Type="TLRManagementModel.Store.User" Multiplicity="*" />
@@ -46,45 +144,148 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TLRManagementModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="SampleEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Materials" EntityType="TLRManagementModel.Material" />
+          <EntitySet Name="StitchingOrders" EntityType="TLRManagementModel.StitchingOrder" />
+          <EntitySet Name="StitchingStatus" EntityType="TLRManagementModel.StitchingStatu" />
+          <EntitySet Name="StitchingTypes" EntityType="TLRManagementModel.StitchingType" />
           <EntitySet Name="Users" EntityType="TLRManagementModel.User" />
           <EntitySet Name="UserTypes" EntityType="TLRManagementModel.UserType" />
+          <AssociationSet Name="FK_StitchingOrder_AssignedToUser" Association="TLRManagementModel.FK_StitchingOrder_AssignedToUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="StitchingOrder" EntitySet="StitchingOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StitchingOrder_CreatedByUser" Association="TLRManagementModel.FK_StitchingOrder_CreatedByUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="StitchingOrder" EntitySet="StitchingOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StitchingOrder_StitchingOrder" Association="TLRManagementModel.FK_StitchingOrder_StitchingOrder">
+            <End Role="StitchingType" EntitySet="StitchingTypes" />
+            <End Role="StitchingOrder" EntitySet="StitchingOrders" />
+          </AssociationSet>
           <AssociationSet Name="FK_User_UserType" Association="TLRManagementModel.FK_User_UserType">
             <End Role="UserType" EntitySet="UserTypes" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Material">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Cost" Nullable="false" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="StitchingOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="StitchingTypeId" Nullable="false" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="DateOfOrder" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="DateOfDelivery" Precision="3" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
+          <Property Type="Boolean" Name="IsActive" Nullable="false" />
+          <Property Type="Int64" Name="CreatedBy" Nullable="false" />
+          <Property Type="Int64" Name="AssignedTo" />
+          <Property Type="Decimal" Name="PaidAmount" Precision="18" Scale="2" />
+          <NavigationProperty Name="AssignedToUser" Relationship="TLRManagementModel.FK_StitchingOrder_AssignedToUser" FromRole="StitchingOrder" ToRole="User" />
+          <NavigationProperty Name="CreatedByUser" Relationship="TLRManagementModel.FK_StitchingOrder_CreatedByUser" FromRole="StitchingOrder" ToRole="User" />
+          <NavigationProperty Name="StitchingType" Relationship="TLRManagementModel.FK_StitchingOrder_StitchingOrder" FromRole="StitchingOrder" ToRole="StitchingType" />
+        </EntityType>
+        <EntityType Name="StitchingStatu">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int16" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StitchingType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int16" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Cost" Nullable="false" Precision="18" Scale="2" />
+          <NavigationProperty Name="StitchingOrders" Relationship="TLRManagementModel.FK_StitchingOrder_StitchingOrder" FromRole="StitchingType" ToRole="StitchingOrder" />
+        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="MiddleName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
-          <Property Name="UserTypeId" Type="Int32" Nullable="false" />
+          <Property Type="Int64" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MiddleName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Phone" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="UserTypeId" Nullable="false" />
+          <NavigationProperty Name="StitchingOrders" Relationship="TLRManagementModel.FK_StitchingOrder_AssignedToUser" FromRole="User" ToRole="StitchingOrder" />
+          <NavigationProperty Name="StitchingOrders1" Relationship="TLRManagementModel.FK_StitchingOrder_CreatedByUser" FromRole="User" ToRole="StitchingOrder" />
           <NavigationProperty Name="UserType" Relationship="TLRManagementModel.FK_User_UserType" FromRole="User" ToRole="UserType" />
         </EntityType>
         <EntityType Name="UserType">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Users" Relationship="TLRManagementModel.FK_User_UserType" FromRole="UserType" ToRole="User" />
         </EntityType>
+        <Association Name="FK_StitchingOrder_AssignedToUser">
+          <End Type="TLRManagementModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="TLRManagementModel.StitchingOrder" Role="StitchingOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StitchingOrder">
+              <PropertyRef Name="AssignedTo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StitchingOrder_CreatedByUser">
+          <End Type="TLRManagementModel.User" Role="User" Multiplicity="1" />
+          <End Type="TLRManagementModel.StitchingOrder" Role="StitchingOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StitchingOrder">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StitchingOrder_StitchingOrder">
+          <End Type="TLRManagementModel.StitchingType" Role="StitchingType" Multiplicity="1" />
+          <End Type="TLRManagementModel.StitchingOrder" Role="StitchingOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StitchingType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StitchingOrder">
+              <PropertyRef Name="StitchingTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_User_UserType">
-          <End Role="UserType" Type="TLRManagementModel.UserType" Multiplicity="1" />
-          <End Role="User" Type="TLRManagementModel.User" Multiplicity="*" />
+          <End Type="TLRManagementModel.UserType" Role="UserType" Multiplicity="1" />
+          <End Type="TLRManagementModel.User" Role="User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserType">
               <PropertyRef Name="Id" />
@@ -100,26 +301,76 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="TLRManagementModelStoreContainer" CdmEntityContainer="SampleEntities">
+          <EntitySetMapping Name="Materials">
+            <EntityTypeMapping TypeName="TLRManagementModel.Material">
+              <MappingFragment StoreEntitySet="Material">
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StitchingOrders">
+            <EntityTypeMapping TypeName="TLRManagementModel.StitchingOrder">
+              <MappingFragment StoreEntitySet="StitchingOrder">
+                <ScalarProperty Name="PaidAmount" ColumnName="PaidAmount" />
+                <ScalarProperty Name="AssignedTo" ColumnName="AssignedTo" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="DateOfDelivery" ColumnName="DateOfDelivery" />
+                <ScalarProperty Name="DateOfOrder" ColumnName="DateOfOrder" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="StitchingTypeId" ColumnName="StitchingTypeId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StitchingStatus">
+            <EntityTypeMapping TypeName="TLRManagementModel.StitchingStatu">
+              <MappingFragment StoreEntitySet="StitchingStatus">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StitchingTypes">
+            <EntityTypeMapping TypeName="TLRManagementModel.StitchingType">
+              <MappingFragment StoreEntitySet="StitchingType">
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="TLRManagementModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserTypes">
             <EntityTypeMapping TypeName="TLRManagementModel.UserType">
               <MappingFragment StoreEntitySet="UserType">
-                <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

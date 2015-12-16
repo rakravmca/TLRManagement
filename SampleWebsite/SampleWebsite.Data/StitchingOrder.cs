@@ -12,26 +12,26 @@ namespace SampleWebsite.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class StitchingOrder
     {
-        public User()
-        {
-            this.StitchingOrders = new HashSet<StitchingOrder>();
-            this.StitchingOrders1 = new HashSet<StitchingOrder>();
-        }
-    
         public long Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string Code { get; set; }
+        public short StitchingTypeId { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public int UserTypeId { get; set; }
+        public System.DateTime DateOfOrder { get; set; }
+        public Nullable<System.DateTime> DateOfDelivery { get; set; }
+        public int Quantity { get; set; }
+        public bool IsActive { get; set; }
+        public long CreatedBy { get; set; }
+        public Nullable<long> AssignedTo { get; set; }
+        public Nullable<decimal> PaidAmount { get; set; }
     
-        public virtual ICollection<StitchingOrder> StitchingOrders { get; set; }
-        public virtual ICollection<StitchingOrder> StitchingOrders1 { get; set; }
-        public virtual UserType UserType { get; set; }
+        public virtual User AssignedToUser { get; set; }
+        public virtual User CreatedByUser { get; set; }
+        public virtual StitchingType StitchingType { get; set; }
     }
 }

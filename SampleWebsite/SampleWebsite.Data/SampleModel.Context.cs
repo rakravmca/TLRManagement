@@ -25,6 +25,10 @@ namespace SampleWebsite.Data
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<Material> Materials { get; set; }
+        public DbSet<StitchingOrder> StitchingOrders { get; set; }
+        public DbSet<StitchingStatu> StitchingStatus { get; set; }
+        public DbSet<StitchingType> StitchingTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<UserType> UserTypes { get; set; }
     }

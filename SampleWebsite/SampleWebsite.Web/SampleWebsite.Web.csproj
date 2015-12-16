@@ -97,6 +97,10 @@
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\npm.js" />
     <Content Include="login.aspx" />
+    <Content Include="Partials\Admin\StitchingOrderList.html" />
+    <Content Include="Partials\Admin\OrderLeft.html" />
+    <Content Include="Partials\Admin\OrderRight.html" />
+    <Content Include="Partials\Admin\StitchingOrderDetail.html" />
     <Content Include="Partials\Public\Product.html" />
     <Content Include="Partials\Public\ProductContent.html" />
     <Content Include="Partials\Public\ProductLeft.html" />
@@ -105,7 +109,9 @@
     <Content Include="Scripts\AdminSite.js" />
     <Content Include="Scripts\jquery-1.11.3.min.js" />
     <Content Include="Scripts\PublicSite.js" />
+    <Content Include="Scripts\Utility.js" />
     <Content Include="Services\ProductService.svc" />
+    <Content Include="Services\StitchingOrderService.svc" />
     <Content Include="Styles\Site.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -136,6 +142,9 @@
     </Compile>
     <Compile Include="Services\ProductService.svc.cs">
       <DependentUpon>ProductService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Services\StitchingOrderService.svc.cs">
+      <DependentUpon>StitchingOrderService.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -178,7 +187,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Partials\Admin\" />
     <Folder Include="Scripts\Custom\" />
     <Folder Include="Styles\Custom\" />
   </ItemGroup>

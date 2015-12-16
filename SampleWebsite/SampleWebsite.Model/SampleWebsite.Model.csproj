@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StitchingOrderModel.cs" />
+    <Compile Include="StitchingStatusModel.cs" />
+    <Compile Include="StitchingTypeModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="UserTypeModel.cs" />
   </ItemGroup>

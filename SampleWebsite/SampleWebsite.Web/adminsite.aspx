@@ -9,6 +9,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="angular/angular.min.js"></script>
     <script src="angular/angular-route.min.js"></script>
+    <script src="Scripts/Utility.js"></script>
     <script src="Scripts/AdminSite.js"></script>
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -47,7 +48,16 @@
                                         <ul class="nav navbar-nav">
                                             <li class="active"><a href="#/home">Home</a></li>
                                             <li><a href="#/product">Products</a></li>
-                                            <li><a href="#/order">Orders</a></li>
+                                            <li>
+                                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Orders 
+                                                    <span class="caret"></span>
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#/stitchingorder/0">Add</a></li>
+                                                    <li><a href="#/stitchingorder">List</a></li>
+                                                </ul>
+                                            </li>
+
                                         </ul>
                                     </div>
                                     <!-- /.navbar-collapse -->

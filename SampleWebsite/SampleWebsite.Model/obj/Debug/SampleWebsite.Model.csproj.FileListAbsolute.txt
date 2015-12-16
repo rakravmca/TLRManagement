@@ -13,3 +13,8 @@ E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\bin\Debug\Sample
 E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.csprojResolveAssemblyReference.cache
 E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.dll
 E:\Projects\BlogArticleSystem\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.pdb
+E:\Projects\TLRManagement\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.csprojResolveAssemblyReference.cache
+E:\Projects\TLRManagement\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.dll
+E:\Projects\TLRManagement\SampleWebsite\SampleWebsite.Model\obj\Debug\SampleWebsite.Model.pdb
+E:\Projects\TLRManagement\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.dll
+E:\Projects\TLRManagement\SampleWebsite\SampleWebsite.Model\bin\Debug\SampleWebsite.Model.pdb

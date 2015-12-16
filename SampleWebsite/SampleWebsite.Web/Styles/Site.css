@@ -17,6 +17,7 @@
 
 #divHeaderBottom {
     min-height:50px;
+    background-color:#000;
 }
 
 #divBody {
@@ -36,4 +37,8 @@
 
 #divLogin {
     margin-top:20px;
+}
+
+.error {
+    color:red;
 }

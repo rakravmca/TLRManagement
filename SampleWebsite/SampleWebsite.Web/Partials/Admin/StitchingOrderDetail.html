@@ -1,0 +1,111 @@
+﻿<div class="row">
+    <div class="col-xs-2">
+        <div data-ng-include="template.Left"></div>
+    </div>
+    <div class="col-xs-8">
+        <div class="container-fluid" data-ng-form="stitchingOrderForm">
+            <div class="row">
+                <div class="col-xs-12 col-sm-2 col-md-3">
+                </div>
+                <div class="col-xs-12 col-sm-8 col-md-6 boxBorder">
+                    <div class="container-fluid">
+                        <div class="row form-group">
+                            <div class="col-xs-12">
+                                <h4><b>Order Detail:</b></h4>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="txtFirstName">First Name</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <input type="text" class="form-control" name="FirstName" data-ng-model="stitchingOrderInfo.FirstName" required="required" />
+                                <div class="error-container" data-ng-show="stitchingOrderForm.FirstName.$dirty && stitchingOrderForm.FirstName.$invalid">
+                                    <span class="error" data-ng-show="stitchingOrderForm.FirstName.$error.required">Your First Name is required.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="txtMiddleName">Middle Name</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <input type="text" class="form-control" data-ng-model="stitchingOrderInfo.MiddleName" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="txtLastName">Last Name</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <input type="text" class="form-control" data-ng-model="stitchingOrderInfo.LastName" />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="txtEmail">Email Address</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <input type="email" class="form-control" name="Email" data-ng-model="stitchingOrderInfo.Email" />
+                                <div class="error-container" data-ng-show="stitchingOrderForm.Email.$dirty && stitchingOrderForm.Email.$invalid">
+                                    <span class="error" data-ng-show="stitchingOrderForm.Email.$error.email">Invalid email address.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="txtPhone">Phone</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <input type="tel" class="form-control" name="Phone" data-ng-model="stitchingOrderInfo.Phone" required="required" />
+                                <div class="error-container" data-ng-show="stitchingOrderForm.Phone.$dirty && stitchingOrderForm.Phone.$invalid">
+                                    <span class="error" data-ng-show="stitchingOrderForm.Phone.$error.required">Your Phone is required.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="ddlStitchingType">Stitching Type</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <select id="ddlStitchingType" class="form-control" name="StitchingType" data-ng-model="stitchingOrderInfo.StitchingType"
+                                    data-ng-options="stitchingType.Name for stitchingType in stitchingOrderInfo.StitchingTypes track by stitchingType.Id" required="required">
+                                </select>
+                                <div class="error-container" data-ng-show="stitchingOrderForm.StitchingType.$dirty && stitchingOrderForm.StitchingType.$invalid">
+                                    <span class="error" data-ng-show="stitchingOrderForm.StitchingType.$error.required">Stitching Type is required.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                <label for="txtQuantity">Quantity</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                <input type="text" id="txtQuantity" class="form-control" name="Quantity" data-ng-model="stitchingOrderInfo.Quantity" required="required" />
+                                <div class="error-container" data-ng-show="stitchingOrderForm.Quantity.$dirty && stitchingOrderForm.Quantity.$invalid">
+                                    <span class="error" data-ng-show="stitchingOrderForm.Quantity.$error.required">Quantity is required.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-xs-12" style="text-align: right;">
+                                <a class="btn btn-default" href="#/stitchingorder">Cancel</a>
+                                <input type="button" class="btn btn-default" data-ng-click="SaveStitchingOrder()" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-3">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-2">
+        <div data-ng-include="template.Right"></div>
+    </div>
+</div>

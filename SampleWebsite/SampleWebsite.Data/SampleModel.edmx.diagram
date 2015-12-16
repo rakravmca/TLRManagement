@@ -5,9 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="9ab0cd06409b49a8a0461c1b8248101d" Name="Diagram1">
-        <EntityTypeShape EntityType="TLRManagementModel.User" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="TLRManagementModel.UserType" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <AssociationConnector Association="TLRManagementModel.FK_User_UserType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TLRManagementModel.Material" Width="1.5" PointX="8.41471267697155" PointY="27.05482138463055" />
+        <EntityTypeShape EntityType="TLRManagementModel.StitchingOrder" Width="1.5" PointX="1.1148749520605779" PointY="16.158398769869656" />
+        <EntityTypeShape EntityType="TLRManagementModel.StitchingStatu" Width="1.5" PointX="0.93558248362298235" PointY="5.4503184433329475" />
+        <EntityTypeShape EntityType="TLRManagementModel.StitchingType" Width="1.5" PointX="7.6622832378662578" PointY="16.914837964305114" />
+        <EntityTypeShape EntityType="TLRManagementModel.User" Width="1.5" PointX="11.719451956320299" PointY="15.584388218626561" />
+        <EntityTypeShape EntityType="TLRManagementModel.UserType" Width="1.5" PointX="8.3736971581232247" PointY="24.96092421978755" />
+        <AssociationConnector Association="TLRManagementModel.FK_StitchingOrder_AssignedToUser" />
+        <AssociationConnector Association="TLRManagementModel.FK_StitchingOrder_CreatedByUser" />
+        <AssociationConnector Association="TLRManagementModel.FK_StitchingOrder_StitchingOrder" />
+        <AssociationConnector Association="TLRManagementModel.FK_User_UserType" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
